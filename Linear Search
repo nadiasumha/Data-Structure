@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arraysize, i, searchvalue , index=-1;
+
+    cout<<"\tEnter array amount : ";
+    cin>>arraysize;
+
+    int arr[arraysize];
+    cout<<"\nEnter the numbers :\n";
+    for(i=0; i<arraysize; i++)
+        cin>>arr[i];
+    cout<<"\tEnter a Number to Search: ";
+    cin>>searchvalue;
+    for(i=0; i<arraysize; i++)
+    {
+        if(arr[i]==searchvalue)
+        {
+            index = i;
+            break;
+        }
+    }
+    cout<<"\n\tFound at Index No:"<<index;
+    cout<<endl;
+    return 0;
+}
