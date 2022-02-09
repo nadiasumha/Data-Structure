@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+   int a,i, arr[5] , j , temp;
+   cout<<"Enter the amount of numbers:";
+   cin>>a;
+   cout<<"\nEnter the numbers:";
+   for(i=0; i<a ; i++)
+    cin>>arr[i];
+   for(i=0; i<a-1 ; i++)
+   {
+       for(j=0; j<(a-i-1); j++)
+       {
+           if(arr[j]>arr[j+1])
+           {
+               temp=arr[j];
+               arr[j]=arr[j+1];
+               arr[j+1]=temp;
+           }
+       }
+
+   }
+    cout<<"\n After sorting the numbers will look like : \n";
+    for(i=0 ; i<a ; i++)
+    cout<<arr[i]<<"\n";
+
+
+
+    return 0;
+}
